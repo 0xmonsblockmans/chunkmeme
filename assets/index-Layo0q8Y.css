@@ -1,0 +1,551 @@
+@charset "UTF-8";
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  color: #000;
+  font-family: Nekst;
+}
+.dnone {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+input,
+textarea {
+  box-sizing: border-box;
+}
+.free_img {
+  width: 0px;
+  height: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+html {
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 800px) {
+  #root {
+    height: calc(100dvh + 1px);
+    overflow: hidden;
+  }
+}
+img {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  outline: none;
+}
+.App_content {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.App_gde {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  font-weight: 900;
+  font-size: 5dvh;
+  color: #fff;
+  text-shadow: 0px 0px 10px #000;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  column-gap: 1vh;
+}
+.App_gde_el {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 1vh;
+  cursor: pointer;
+  transition: rotate 0.2s;
+}
+.App_gde_el:hover {
+  rotate: 5deg;
+}
+.App_gde_el img {
+  width: 3vh;
+  height: 3vh;
+  filter: drop-shadow(0px 0px 10px #000);
+}
+.Fred {
+  position: fixed;
+  bottom: 15dvh;
+  width: 100% !important;
+  z-index: 99;
+}
+.Fred img {
+  height: 30dvh;
+  pointer-events: none;
+}
+.Sky {
+  position: fixed;
+  width: 100% !important;
+  justify-content: center !important;
+  align-items: center;
+  bottom: 0;
+}
+.Sky img {
+  object-fit: contain;
+  min-width: 170vw;
+  transition: transform 0.2s ease-out;
+}
+@media (min-height: 50vw) {
+  .Sky img {
+    min-width: 170vw;
+  }
+}
+@media (min-height: 75vw) {
+  .Sky img {
+    min-width: 200vw;
+  }
+}
+@media (min-height: 100vw) {
+  .Sky img {
+    min-width: 350vw;
+  }
+}
+@media (min-height: 150vw) {
+  .Sky img {
+    min-width: 400vw;
+  }
+}
+@media (min-height: 200vw) {
+  .Sky img {
+    min-width: 475vw;
+  }
+}
+@media (min-height: 250vw) {
+  .Sky img {
+    min-width: 550vw;
+  }
+}
+.Sq {
+  z-index: 2;
+}
+.Sq_sq:hover {
+  cursor: pointer;
+}
+.Sq_coin img {
+  min-width: 3dvh;
+}
+.Acorn {
+  z-index: 2;
+}
+.Acorn img:hover {
+  cursor: pointer;
+}
+.Trends {
+  z-index: 2;
+}
+.Trends_bull {
+  transform-origin: 20dvh 10dvh;
+  animation: flicker 3s infinite;
+}
+.Trends_bull:hover {
+  transform: rotate(10deg);
+}
+.Trends_bear {
+  transform-origin: -20dvh 10dvh;
+  animation: flicker 4s infinite;
+}
+.Trends_bear:hover {
+  transform: rotate(10deg);
+}
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.85;
+  }
+  70% {
+    opacity: 0.65;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Cave {
+  z-index: 2;
+}
+.Cave_inner img {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.Cave_inner img:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.Rocks {
+  z-index: 3;
+}
+.Rocks_right img {
+  transform: translate(-20dvh);
+  transition: transform 1s ease-in-out;
+}
+.Rocks_right img:hover {
+  transform: translate(0);
+  cursor: pointer;
+  transition: transform 1s ease-in-out;
+}
+.Bridge {
+  z-index: 3;
+}
+.Bridge img {
+  transition: filter 0.5s;
+}
+.Bridge img:hover {
+  cursor: pointer;
+  transition: filter 1s;
+  filter: drop-shadow(0px 0px 30px #fe14ff);
+}
+.Flag {
+  z-index: 3;
+}
+.Flag img {
+  transform-origin: left bottom;
+  transition: transform 1s;
+}
+.Flag img:hover {
+  transition: transform 1s;
+  transform: rotate(-20deg);
+  cursor: pointer;
+}
+.Book {
+  z-index: 3;
+}
+.Book img {
+  transition: transform 0.2s;
+}
+.Book img:hover {
+  cursor: pointer;
+  transform: scale(1.4);
+  transition: transform 1s;
+}
+.Rocket,
+.Chest {
+  z-index: 3;
+}
+.Chest img {
+  transition: transform 1s;
+}
+.Chest img:hover {
+  cursor: pointer;
+  transition: transform 1s;
+  transform: scale(1.3);
+}
+.Trace {
+  z-index: 3;
+}
+.Trace img {
+  opacity: 0.1;
+  transition: opacity 1s;
+}
+.Trace img:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.Cafe {
+  z-index: 3;
+}
+.Cafe img {
+  transition: filter 1s;
+}
+.Cafe img:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 20px #fbb645);
+}
+.Cafe_text_inner {
+  pointer-events: none;
+  background: #fff;
+  min-width: 30dvh;
+  min-height: 2dvh;
+  font-size: 2dvh;
+  color: #000;
+  padding: 1dvh;
+  border-radius: 1dvh;
+  box-shadow: 0.5dvh 0.5dvh 1dvh #0004;
+  transition: opacity 0.5s;
+}
+.Hotel {
+  z-index: 3;
+}
+.Hotel img {
+  transition: filter 0.5s;
+}
+.Hotel img:hover {
+  cursor: pointer;
+  transition: filter 1s;
+  filter: drop-shadow(0px 0px 30px #fe14ff);
+}
+.Grafiti {
+  z-index: 4;
+}
+.Grafiti img {
+  opacity: 0.2;
+  transition: opacity 1s;
+}
+.Grafiti img:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.Pizza {
+  z-index: 3;
+}
+.Pizza img {
+  transition: transform 1s;
+}
+.Pizza img:hover {
+  cursor: pointer;
+  transform: scale(1.4);
+}
+.Pizza_text_inner {
+  pointer-events: none;
+  background: #fff;
+  min-width: 30dvh;
+  min-height: 2dvh;
+  font-size: 2dvh;
+  color: #000;
+  padding: 1dvh;
+  border-radius: 1dvh;
+  box-shadow: 0.5dvh 0.5dvh 1dvh #0004;
+  transition: opacity 0.5s;
+}
+.Clock {
+  z-index: 3;
+}
+.Clock img {
+  transition: transform 0.3s, filter 0.3s;
+}
+.Clock img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2666666667));
+}
+.SatoshiShadow {
+  z-index: 3;
+}
+.SatoshiShadow .free_img {
+  align-items: start;
+}
+.SatoshiShadow img {
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.4;
+  cursor: pointer;
+  transform: translateY(5dvh);
+}
+.SatoshiShadow img:hover {
+  opacity: 1;
+  transform: scale(2);
+}
+.Nest {
+  z-index: 3;
+}
+.Nest img {
+  cursor: pointer;
+  transition: scale 0.2s, transform 0.1s ease-out;
+}
+.Nest img:hover {
+  scale: 1.05;
+}
+.Mine {
+  z-index: 3;
+}
+.Mine_mine {
+  cursor: pointer;
+  transition: filter 0.5s, translate 0.2s ease-out, transform 0.5s;
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0));
+}
+.Mine_mine:hover {
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5333333333));
+}
+.Mine_asics img {
+  transform-origin: 80% 80%;
+  transition: transform 0.1s;
+}
+.MountTrace {
+  z-index: 3;
+}
+.MountTrace img {
+  cursor: pointer;
+  transition: opacity 0.5s;
+  opacity: 0.2;
+}
+.MountTrace img:hover {
+  opacity: 1;
+}
+.Flower,
+.Bird {
+  z-index: 3;
+}
+.Bird img {
+  cursor: pointer;
+}
+.Bird_text {
+  font-size: 3vh;
+  color: #fff;
+  font-weight: 900;
+  opacity: 0;
+}
+.Bird_text_show {
+  opacity: 1;
+}
+.Bees,
+.Whale {
+  z-index: 3;
+}
+.Whale img {
+  opacity: 0.2;
+  transition: opacity 0.3s;
+}
+.Whale img:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.Trash {
+  z-index: 2;
+}
+.Trash_trash:hover {
+  cursor: pointer;
+}
+.Trash_coin img {
+  width: 15dvh;
+}
+.Tables {
+  z-index: 3;
+}
+.Tables img {
+  transform-origin: 50% 100%;
+}
